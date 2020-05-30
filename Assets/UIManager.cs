@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject carObject;
+    public TextMeshProUGUI carSpeedTxt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +15,8 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        carSpeedTxt.SetText(Mathf.RoundToInt(carObject.GetComponent<CarController>().carSpeed).ToString() +" km/h");
     }
 }
