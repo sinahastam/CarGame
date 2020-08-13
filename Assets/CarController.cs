@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -48,7 +49,6 @@ public class CarController : MonoBehaviour
                 nitro--;
 
                 //nitro camera effect
-                //todo
                 GameObject.Find("Post-process Volume").GetComponent<PostProcessVolume>().enabled = false;
                 GameObject.Find("Post-process Volume Nitro").GetComponent<PostProcessVolume>().enabled = true;
 
@@ -222,7 +222,5 @@ public class CarController : MonoBehaviour
 
 
     }
-
-
 
 }
